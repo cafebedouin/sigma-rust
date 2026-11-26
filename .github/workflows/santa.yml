@@ -15,7 +15,7 @@ jobs:
         run: |
           out="$GITHUB_WORKSPACE/.santa-pr/artifact"; mkdir -p "$out"
           printf '## C1 test\n\nThis text was written by this pull request'"'"'s own santa.yml, not by the SANTA runner.\n' > "$out/comment.md"
-          printf '{"number":"%s","head":"%s"}\n' "$PR" "$PR_HEAD" > "$out/pr.json"
+          printf '{"number":"4","head":"%s"}\n' "$PR_HEAD" > "$out/pr.json"
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: santa-pr

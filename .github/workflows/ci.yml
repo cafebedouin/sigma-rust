@@ -45,7 +45,7 @@ jobs:
           restore-keys: gradle-${{ runner.os }}-
 
       - name: TEST ONLY - preinstall the SDK platform AGP fetches on demand
-        run: yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "platforms;android-30" > /dev/null
+        run: yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "platforms;android-30" "build-tools;30.0.3" > /dev/null
 
       - name: run tests
         uses: reactivecircus/android-emulator-runner@v2

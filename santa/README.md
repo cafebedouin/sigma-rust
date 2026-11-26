@@ -92,3 +92,4 @@ child's memory in `/proc`.
   a value or verdict, `errored` (sigma-rust's own refusal, a divergence where the reference
   accepted), `not-implemented`, or `panicked` (a panic, caught, or a failure of the runner itself,
   with a note).
+
